@@ -9,6 +9,8 @@ import RestaurantMenuPage from "./pages/RestaurantMenuPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import OrderProgressPage from "./pages/OrderProgressPage";
+import LoginPage from "./pages/LoginPage"; // Added
+import SignupPage from "./pages/SignupPage"; // Added
 import NotFound from "./pages/NotFound"; // Assuming NotFound.tsx exists
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/order-progress/:orderId" element={<OrderProgressPage />} />
+          <Route path="/login" element={<LoginPage />} /> {/* Added Login Route */}
+          <Route path="/signup" element={<SignupPage />} /> {/* Added Signup Route */}
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} /> {/* Always Include This Line As It Is. */}
